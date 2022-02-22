@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>spacex</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+    
+<body>
+	<header>
+            <img class='logo'src="images/spacex_logo.png"/>
+    </header>
+
+	<content>
+        <div class="grid-item voedselvoorraad">
+            <h5>Foodsupply</h5>
+            <canvas id="myChart"></canvas>
+        
+        <script>
+            
+                data = {
+                datasets: [{
+                data: [60, 80],
+                backgroundColor: [
+                    'rgb(123, 215, 194)',
+                    'rgb(182, 240, 101)'
+                ],
+            }],
+
+                labels: [
+                'Dry food',
+                'Water',
+                ]
+            };
+            
+            const config = {
+                type: 'doughnut',
+                data: data,
+                };
+
+        </script>
+        
+        <script>
+            
+            const myChart  = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+        </script>
+            
+        </div>
+    
+    
+        <div class= "grid-item gravity">
+            <h5>Gravity</h5>
+            <canvas id="radarChart"></canvas>
+            
+        <script>
+            
+            data: {
+                labels: ['gravity', 'speed', 'co2', 'anti-grafity'],
+                datasets: [{
+                   label: 'My First Dataset',
+                    data: [70, 20, 5, 80],
+                    fill: true,
+                    backgroundColor: 'rgba(254, 163, 40, 0.2)',
+                    borderColor: 'rgb(254, 163, 40)',
+                    }]
+            }
+            
+            const config3 = {
+                type: 'radar',
+                data: data,
+                };
+        </script>
+            
+        <script>
+            const radarChart = new Chart(
+            document.getElementById('radarChart'),
+            config3
+        );
+        </script>
+            
+        </div>
+   
+        
+		<div class= "grid-item klimaat">
+            <h5>Klimaat</h5>
+            <canvas id="lineChart"></canvas>
+        
+        <script>
+            const labels = [
+            'maandag',
+            'dinsdag',
+            'woensdag',
+            'donderdag',
+            'zaterdag',
+            'zondag',
+            ];
+
+            const data = {
+                labels: labels,
+                datasets: [{
+                    label: 'graden',
+                    backgroundColor: 'rgb(115, 21, 171)',
+                    borderColor: 'rgb(115, 21, 171)',
+                    data: [-100, -20, 5, 25, 80, 40, 100],
+                    }]
+            };
+
+            const config2 = {
+                type: 'line',
+                data: data,
+                options: {}
+                };
+        </script>
+
+        <script>
+            const lineChart = new Chart(
+            document.getElementById('lineChart'),
+            config2
+        );
+        </script>
+        
+    </div>
+
+	</content>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+header{
+    background-color: #000000;
+    opacity: 60%;
+    height: auto;
+}
+
+
+body{
+    background-image: url("/images/Space.jpg");
+    background-size: 1920px 1080px;
+    margin: auto;
+    display: block;
+}
+
+h5{
+    text-align: center;
+    font-family: 'arial';
+    color: #ffffff;
+}
+
+.logo{
+    width: 40%;
+    height: auto;
+}
+
+.voedselvoorraad{ 
+    background-color: #000000;
+    margin-top: 50px;
+    border-radius: 30px;
+    grid-area: voedselvoorraad;
+        }
+.gravity{
+    background-color: #000000;
+    margin-top: 50px;
+    border-radius: 30px;
+    grid-area: gravity;
+}
+
+.klimaat{
+    background-color: #000000;
+    margin-top: 50px;
+    border-radius: 30px;
+    grid-area: klimaat;
+}
+
+
+@media only screen (max-width: 374px){
+    
+    content{
+        display: grid;
+        grid-template-columns:1fr,1fr, 2fr ;
+        grid-template-areas: 
+            "voedselvoorraad"
+            "gravity"
+            "klimaat, klimaat";
+    }
+
+    .voedselvoorraad{
+        width: 60vw;
+        
+    }
+}
+
+    
+@media only screen and (min-width:375px) and (max-width: 1024px){
+    
+    content{
+        display: grid;
+        grid-template-columns:1fr,1fr, 2fr ;
+        grid-template-areas: 
+            "voedselvoorraad, grafity"
+            "klimaat, klimaat";
+    }
+    
+} 
+
+
+
+@media only screen and (min-width:1023px) and (max-width: 1920px){
+    
+    content{
+        display: grid;
+        grid-template-columns:1fr,1fr, 2fr ;
+        grid-template-areas: 
+            "voedselvoorraad, gravity, klimaat"
+    }
+    
+}
